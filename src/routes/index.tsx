@@ -339,7 +339,7 @@ function Contact() {
           </Card>
           <Card className="p-6 rounded-2xl border-border/60 flex items-center gap-4">
             <div className="h-11 w-11 rounded-xl flex items-center justify-center text-primary-foreground" style={{ background: "var(--gradient-hero)" }}><Linkedin className="h-5 w-5" /></div>
-            <div><div className="text-xs text-muted-foreground">LinkedIn</div><a href="https://linkedin.com/in/dikeledikhoza" target="_blank" rel="noreferrer" className="font-semibold hover:text-accent">dikeledikhoza</a></div>
+            <div><div className="text-xs text-muted-foreground">LinkedIn</div><a href="https://www.linkedin.com/in/dikeledi-khoza?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="font-semibold hover:text-accent">dikeledikhoza</a></div>
           </Card>
           <a href="https://calendly.com" target="_blank" rel="noreferrer" className="block">
             <Button size="lg" className="w-full rounded-2xl h-14 text-primary-foreground" style={{ background: "var(--gradient-hero)" }}>
@@ -377,7 +377,7 @@ function Footer() {
         <div>
           <div className="text-sm font-semibold mb-3">Connect</div>
           <div className="flex gap-3">
-            <a href="https://linkedin.com/in/dikeledikhoza" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"><Linkedin className="h-4 w-4" /></a>
+            <a href="https://www.linkedin.com/in/dikeledi-khoza?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"><Linkedin className="h-4 w-4" /></a>
             <a href="mailto:dikeledibongiwe04@gmail.com" aria-label="Email" className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"><Mail className="h-4 w-4" /></a>
             <a href="https://wa.me/27673802975" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"><Phone className="h-4 w-4" /></a>
           </div>
