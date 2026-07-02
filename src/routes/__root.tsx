@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "linkedin" },
+      { name: "description", content: "AI Productivity Hub: A personal portfolio website for an AI Productivity & Automation Specialist." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "linkedin" },
+      { property: "og:description", content: "AI Productivity Hub: A personal portfolio website for an AI Productivity & Automation Specialist." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "linkedin" },
+      { name: "twitter:description", content: "AI Productivity Hub: A personal portfolio website for an AI Productivity & Automation Specialist." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/88b4da07-1418-4cec-b09b-50259030cfb4/id-preview-dce23091--f4b846c9-eaaa-42f2-b9f9-d07e2ecc84d0.lovable.app-1782999428206.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/88b4da07-1418-4cec-b09b-50259030cfb4/id-preview-dce23091--f4b846c9-eaaa-42f2-b9f9-d07e2ecc84d0.lovable.app-1782999428206.png" },
     ],
     links: [
       {
