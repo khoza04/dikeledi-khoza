@@ -4,7 +4,7 @@ import {
   Brain, Workflow, Sparkles, GraduationCap, PenTool, Rocket,
   Clock, TrendingUp, DollarSign, Zap, Lightbulb, MessageCircle,
   Mail, Phone, Linkedin, Calendar, Menu, X, ArrowRight, Check,
-  Bot, FileText, Search, BookOpen,
+
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -14,6 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import heroImg from "@/assets/hero-ai.jpg";
+import { ProjectsSection } from "@/components/ProjectsSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -198,40 +199,6 @@ function Tools() {
   );
 }
 
-const projects = [
-  { icon: Bot, title: "Customer Support AI Assistant", problem: "Slow response to repetitive customer questions.", solution: "Built a trained chatbot to handle FAQs 24/7.", tools: "ChatGPT, Zapier", impact: "70% faster response time" },
-  { icon: PenTool, title: "AI Marketing Content Generator", problem: "Marketing team struggling to produce content at scale.", solution: "Branded prompt library + content workflow.", tools: "Claude, Notion AI", impact: "3x more content output" },
-  { icon: Workflow, title: "Business Workflow Automation", problem: "Manual data entry across multiple tools.", solution: "Zapier + Make automations connecting CRM, email, and Slack.", tools: "Zapier, Make", impact: "15 hrs/week saved" },
-  { icon: Mail, title: "AI Email Assistant", problem: "Inbox overload and slow follow-ups.", solution: "Smart triage, drafts, and templated replies.", tools: "ChatGPT, Gmail", impact: "60% less time on email" },
-  { icon: Search, title: "AI Research Assistant", problem: "Hours spent researching competitors and trends.", solution: "Automated weekly research reports.", tools: "Perplexity, Claude", impact: "From 5 hrs to 20 mins" },
-  { icon: BookOpen, title: "AI Prompt Library", problem: "Inconsistent prompt quality across the team.", solution: "Curated, tested prompt vault by use case.", tools: "Notion AI, ChatGPT", impact: "Consistent brand voice" },
-];
-
-function Portfolio() {
-  return (
-    <Section id="portfolio" eyebrow="Portfolio" title="Real projects, real results." subtitle="A snapshot of recent AI engagements.">
-      <div className="grid md:grid-cols-2 gap-6">
-        {projects.map((p) => (
-          <Card key={p.title} className="p-7 rounded-2xl border-border/60 hover:shadow-xl transition-all hover:-translate-y-1">
-            <div className="flex items-start gap-4 mb-5">
-              <div className="h-12 w-12 rounded-xl flex items-center justify-center text-primary-foreground shrink-0" style={{ background: "var(--gradient-hero)" }}>
-                <p.icon className="h-5 w-5" />
-              </div>
-              <h3 className="font-bold text-xl pt-2">{p.title}</h3>
-            </div>
-            <dl className="space-y-3 text-sm">
-              <div><dt className="font-semibold text-foreground">Problem</dt><dd className="text-muted-foreground">{p.problem}</dd></div>
-              <div><dt className="font-semibold text-foreground">Solution</dt><dd className="text-muted-foreground">{p.solution}</dd></div>
-              <div><dt className="font-semibold text-foreground">AI Tools</dt><dd className="text-muted-foreground">{p.tools}</dd></div>
-              <div className="pt-2 border-t border-border/60"><dt className="font-semibold text-accent">Business Impact</dt><dd className="text-foreground font-medium">{p.impact}</dd></div>
-            </dl>
-          </Card>
-        ))}
-      </div>
-    </Section>
-  );
-}
-
 const benefits = [
   { icon: Clock, label: "Save Time" },
   { icon: TrendingUp, label: "Increase Productivity" },
@@ -399,7 +366,7 @@ function Index() {
         <About />
         <Services />
         <Tools />
-        <Portfolio />
+        <ProjectsSection />
         <WhyMe />
         <Testimonials />
         <Blog />
