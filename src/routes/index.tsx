@@ -299,13 +299,13 @@ function Services() {
 
       {/* CTA */}
       <div className="mt-14 md:mt-16 rounded-3xl p-8 md:p-12 text-center text-primary-foreground" style={{ background: "var(--gradient-hero)" }}>
-        <h3 className="text-2xl md:text-3xl font-bold mb-3">Have a task or business process you want to improve? Let's talk.</h3>
-        <p className="text-sm md:text-base opacity-90 max-w-xl mx-auto mb-6">
-          Tell me what's slowing you down and I'll suggest practical ways to save time and work more efficiently.
+        <h3 className="text-2xl md:text-3xl font-bold mb-3">Need help getting more done?</h3>
+        <p className="text-sm md:text-base opacity-90 max-w-2xl mx-auto mb-6 leading-relaxed">
+          Whether you need reliable support, better systems, social media management, or help bringing a project to completion, I can help you build a more organized and efficient workflow.
         </p>
         <a href="#contact">
           <Button size="lg" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-            Work With Me <ArrowRight className="h-4 w-4 ml-1" />
+            Let's Work Together <ArrowRight className="h-4 w-4 ml-1" />
           </Button>
         </a>
       </div>
