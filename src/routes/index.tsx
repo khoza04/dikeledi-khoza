@@ -4,6 +4,7 @@ import {
   Brain, Workflow, Sparkles, GraduationCap, PenTool, Rocket,
   Clock, TrendingUp, DollarSign, Zap, Lightbulb, MessageCircle,
   Mail, Phone, Linkedin, Calendar, Menu, X, ArrowRight, Check,
+  Briefcase, Megaphone, Database,
 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -154,27 +155,120 @@ function About() {
 }
 
 const services = [
-  { icon: Brain, title: "AI Consulting", desc: "Identify opportunities where AI can improve efficiency in your business." },
-  { icon: Workflow, title: "Workflow Automation", desc: "Automate repetitive business tasks using AI tools and integrations." },
-  { icon: Sparkles, title: "Prompt Engineering", desc: "Create high-quality, reusable prompts tailored for business use." },
-  { icon: GraduationCap, title: "AI Training", desc: "Teach your team how to use AI tools confidently and effectively." },
-  { icon: PenTool, title: "Content Creation with AI", desc: "Produce marketing content faster without losing your brand voice." },
-  { icon: Rocket, title: "AI Productivity Coaching", desc: "1:1 coaching for entrepreneurs ready to scale with AI." },
+  {
+    icon: Briefcase,
+    title: "Virtual Assistant & Executive Support",
+    desc: "Helping businesses and busy professionals stay organized and save time by handling day-to-day administrative tasks.",
+    items: [
+      "Administrative support",
+      "Calendar & meeting management",
+      "Email management",
+      "Data entry & document management",
+      "Customer support",
+      "CRM updates & lead management",
+    ],
+  },
+  {
+    icon: Brain,
+    title: "AI Solutions & AI Consulting",
+    desc: "Helping businesses understand and use AI to improve the way they work — no technical background required.",
+    items: [
+      "AI tool implementation",
+      "AI workflow design",
+      "AI consulting for small businesses",
+      "Prompt creation & optimization",
+      "AI productivity systems",
+      "Identifying AI opportunities",
+    ],
+  },
+  {
+    icon: Workflow,
+    title: "Business Automation",
+    desc: "Creating simple automated systems that reduce repetitive manual tasks and improve business efficiency.",
+    items: [
+      "Workflow automation",
+      "Lead management automation",
+      "Email automation",
+      "Customer support automation",
+      "Connecting business tools & apps",
+      "Zapier-based automation solutions",
+    ],
+  },
+  {
+    icon: Megaphone,
+    title: "Digital Marketing & LinkedIn Support",
+    desc: "Helping businesses improve their online presence and attract potential clients through smart, AI-assisted content.",
+    items: [
+      "LinkedIn content creation",
+      "LinkedIn profile support",
+      "Social media content",
+      "AI-assisted marketing content",
+      "Lead research & prospecting",
+      "Outreach message creation",
+    ],
+  },
+  {
+    icon: Database,
+    title: "Data Entry & Research",
+    desc: "Providing accurate, organized data support so your business decisions are built on reliable information.",
+    items: [
+      "Data entry",
+      "Data cleaning",
+      "Spreadsheet management",
+      "Web research",
+      "Lead generation",
+      "CRM data management",
+    ],
+  },
 ];
 
 function Services() {
   return (
-    <Section id="services" eyebrow="Services" title="What I do for you." subtitle="End-to-end support — from strategy to setup to training.">
+    <Section
+      id="services"
+      eyebrow="Services"
+      title="How I Can Help Your Business"
+      subtitle="I combine virtual assistance, AI, and automation to help businesses save time, stay organized, and work more efficiently."
+    >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
-          <Card key={s.title} className="group p-7 rounded-2xl border-border/60 hover:border-accent/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <Card
+            key={s.title}
+            className="group p-7 rounded-2xl border-border/60 hover:border-accent/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+          >
             <div className="h-12 w-12 rounded-xl flex items-center justify-center mb-5 text-primary-foreground" style={{ background: "var(--gradient-hero)" }}>
               <s.icon className="h-5 w-5" />
             </div>
             <h3 className="font-bold text-lg mb-2">{s.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-5">{s.desc}</p>
+            <ul className="space-y-2 mb-6 mt-auto">
+              {s.items.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <Check className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a href="#contact">
+              <Button variant="outline" size="sm" className="rounded-full w-full group-hover:border-accent group-hover:text-accent transition-colors">
+                Get Started <ArrowRight className="h-4 w-4 ml-1" />
+              </Button>
+            </a>
           </Card>
         ))}
+      </div>
+
+      {/* CTA */}
+      <div className="mt-14 md:mt-16 rounded-3xl p-8 md:p-12 text-center text-primary-foreground" style={{ background: "var(--gradient-hero)" }}>
+        <h3 className="text-2xl md:text-3xl font-bold mb-3">Have a task or business process you want to improve? Let's talk.</h3>
+        <p className="text-sm md:text-base opacity-90 max-w-xl mx-auto mb-6">
+          Tell me what's slowing you down and I'll suggest practical ways to save time and work more efficiently.
+        </p>
+        <a href="#contact">
+          <Button size="lg" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+            Work With Me <ArrowRight className="h-4 w-4 ml-1" />
+          </Button>
+        </a>
       </div>
     </Section>
   );
