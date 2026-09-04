@@ -4,7 +4,7 @@ import {
   Brain, Workflow, Sparkles, GraduationCap, PenTool, Rocket,
   Clock, TrendingUp, DollarSign, Zap, Lightbulb, MessageCircle,
   Mail, Phone, Linkedin, Calendar, Menu, X, ArrowRight, Check,
-  Briefcase, Megaphone, Database,
+  Briefcase, Megaphone, Database, Share2, ClipboardList,
 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -158,66 +158,105 @@ const services = [
   {
     icon: Briefcase,
     title: "Virtual Assistant & Executive Support",
-    desc: "Helping businesses and busy professionals stay organized and save time by handling day-to-day administrative tasks.",
+    desc: "Help business owners and professionals stay organized and focused on their priorities.",
     items: [
       "Administrative support",
-      "Calendar & meeting management",
       "Email management",
-      "Data entry & document management",
+      "Calendar & meeting management",
+      "Scheduling & follow-ups",
+      "Data entry",
       "Customer support",
-      "CRM updates & lead management",
+      "Internet research",
+      "CRM management",
     ],
   },
   {
     icon: Brain,
     title: "AI Solutions & AI Consulting",
-    desc: "Helping businesses understand and use AI to improve the way they work — no technical background required.",
+    desc: "Help businesses identify practical ways to use AI to improve productivity and reduce repetitive work.",
     items: [
       "AI tool implementation",
       "AI workflow design",
-      "AI consulting for small businesses",
-      "Prompt creation & optimization",
+      "AI consulting",
+      "Prompt engineering",
+      "AI-powered business solutions",
       "AI productivity systems",
-      "Identifying AI opportunities",
+      "AI process optimization",
     ],
   },
   {
     icon: Workflow,
     title: "Business Automation",
-    desc: "Creating simple automated systems that reduce repetitive manual tasks and improve business efficiency.",
+    desc: "Build simple systems that automate repetitive business processes and save valuable time.",
     items: [
       "Workflow automation",
+      "Zapier automation",
       "Lead management automation",
       "Email automation",
       "Customer support automation",
-      "Connecting business tools & apps",
-      "Zapier-based automation solutions",
+      "Automated follow-ups",
+      "Connecting business applications",
+      "Data collection & processing",
+    ],
+  },
+  {
+    icon: Share2,
+    title: "Social Media Management",
+    desc: "Help businesses maintain a consistent and professional social media presence.",
+    items: [
+      "Social media management",
+      "Content planning",
+      "Content creation",
+      "Social media scheduling",
+      "LinkedIn management",
+      "Social media captions & copywriting",
+      "Engagement & community support",
+      "AI-assisted content creation",
     ],
   },
   {
     icon: Megaphone,
     title: "Digital Marketing & LinkedIn Support",
-    desc: "Helping businesses improve their online presence and attract potential clients through smart, AI-assisted content.",
+    desc: "Help businesses strengthen their digital presence and generate new opportunities.",
     items: [
       "LinkedIn content creation",
       "LinkedIn profile support",
-      "Social media content",
-      "AI-assisted marketing content",
-      "Lead research & prospecting",
+      "Lead research",
+      "Lead generation",
+      "Prospecting",
       "Outreach message creation",
+      "Digital marketing support",
+      "Marketing content creation",
+    ],
+  },
+  {
+    icon: ClipboardList,
+    title: "Project Management",
+    desc: "Help businesses keep projects organized, on track, and moving forward.",
+    items: [
+      "Project planning",
+      "Task management",
+      "Timeline & deadline tracking",
+      "Team coordination",
+      "Meeting coordination",
+      "Project documentation",
+      "Progress tracking",
+      "Workflow organization",
     ],
   },
   {
     icon: Database,
     title: "Data Entry & Research",
-    desc: "Providing accurate, organized data support so your business decisions are built on reliable information.",
+    desc: "Provide reliable support for businesses that need accurate information and organized data.",
     items: [
       "Data entry",
       "Data cleaning",
       "Spreadsheet management",
       "Web research",
-      "Lead generation",
+      "Lead research",
       "CRM data management",
+      "Information gathering",
+      "Data organization",
     ],
   },
 ];
@@ -228,7 +267,7 @@ function Services() {
       id="services"
       eyebrow="Services"
       title="How I Can Help Your Business"
-      subtitle="I combine virtual assistance, AI, and automation to help businesses save time, stay organized, and work more efficiently."
+      subtitle="I help businesses save time, stay organized, improve their online presence, and work more efficiently by combining virtual assistance, AI, automation, digital marketing, and project management."
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
@@ -260,13 +299,13 @@ function Services() {
 
       {/* CTA */}
       <div className="mt-14 md:mt-16 rounded-3xl p-8 md:p-12 text-center text-primary-foreground" style={{ background: "var(--gradient-hero)" }}>
-        <h3 className="text-2xl md:text-3xl font-bold mb-3">Have a task or business process you want to improve? Let's talk.</h3>
-        <p className="text-sm md:text-base opacity-90 max-w-xl mx-auto mb-6">
-          Tell me what's slowing you down and I'll suggest practical ways to save time and work more efficiently.
+        <h3 className="text-2xl md:text-3xl font-bold mb-3">Need help getting more done?</h3>
+        <p className="text-sm md:text-base opacity-90 max-w-2xl mx-auto mb-6 leading-relaxed">
+          Whether you need reliable support, better systems, social media management, or help bringing a project to completion, I can help you build a more organized and efficient workflow.
         </p>
         <a href="#contact">
           <Button size="lg" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-            Work With Me <ArrowRight className="h-4 w-4 ml-1" />
+            Let's Work Together <ArrowRight className="h-4 w-4 ml-1" />
           </Button>
         </a>
       </div>
