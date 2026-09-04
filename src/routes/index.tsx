@@ -4,7 +4,7 @@ import {
   Brain, Workflow, Sparkles, GraduationCap, PenTool, Rocket,
   Clock, TrendingUp, DollarSign, Zap, Lightbulb, MessageCircle,
   Mail, Phone, Linkedin, Calendar, Menu, X, ArrowRight, Check,
-  Briefcase, Megaphone, Database,
+  Briefcase, Megaphone, Database, Share2, ClipboardList,
 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
