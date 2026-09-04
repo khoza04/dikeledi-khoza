@@ -267,7 +267,7 @@ function Services() {
       id="services"
       eyebrow="Services"
       title="How I Can Help Your Business"
-      subtitle="I combine virtual assistance, AI, and automation to help businesses save time, stay organized, and work more efficiently."
+      subtitle="I help businesses save time, stay organized, improve their online presence, and work more efficiently by combining virtual assistance, AI, automation, digital marketing, and project management."
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
