@@ -267,7 +267,7 @@ export function ProjectsSection() {
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.short}</p>
-                <div className="text-sm font-semibold text-accent mb-4">{p.evidence ? (p.id === "scheduled-ai-research" ? "Workflow in progress" : "Built workflow · Actual screenshot") : p.result}</div>
+                <div className="text-sm font-semibold text-accent mb-4">{p.evidence ? "Built workflow · Actual screenshot" : p.result}</div>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.tools.map((t) => (
                     <Badge key={t} variant="secondary" className="rounded-full text-[11px] px-2.5 py-0.5">{t}</Badge>
