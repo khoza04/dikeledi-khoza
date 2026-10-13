@@ -10,6 +10,9 @@ import workflowImg from "@/assets/projects/workflow-automation.jpg.asset.json";
 import emailImg from "@/assets/projects/email-assistant.jpg.asset.json";
 import researchImg from "@/assets/projects/research-assistant.jpg.asset.json";
 import promptImg from "@/assets/projects/prompt-library.jpg.asset.json";
+import researchWorkflowImg from "@/assets/projects/ai-research-n8n.png.asset.json";
+import meetingWorkflowImg from "@/assets/projects/fireflies-hubspot-n8n.png.asset.json";
+import customerWorkflowImg from "@/assets/projects/gmail-customer-data-n8n.png.asset.json";
 
 type Project = {
   id: string;
@@ -27,9 +30,68 @@ type Project = {
   deliverables: string[];
   result: string;
   image: string;
+  caption?: string;
+  evidence?: string;
 };
 
 export const projects: Project[] = [
+  {
+    id: "gmail-customer-data",
+    icon: Mail,
+    title: "Customer Email to Spreadsheet",
+    category: "Admin Support & Automation",
+    role: "Virtual Assistant & Automation Specialist",
+    period: "Workflow screenshot · October 2026",
+    short: "An n8n workflow designed to capture customer details from Gmail, organize them in Google Sheets, and mark processed emails as read.",
+    overview: "I built a workflow to support customer administration by connecting inbox management with spreadsheet record keeping. The screenshot shows a new customer email trigger, a customer-details step, a spreadsheet action, and an email status update.",
+    problem: "Copying customer details from emails into a spreadsheet is repetitive administrative work and makes it harder to keep track of processed messages.",
+    solution: "Connect a new Gmail message to a customer-details step, append the details to Google Sheets, and mark the email as read.",
+    skills: ["Administrative Support", "Email Management", "Data Organization", "Spreadsheet Management", "Workflow Automation"],
+    tools: ["n8n", "Gmail", "Google Sheets"],
+    deliverables: ["New customer email trigger", "Customer-details mapping step", "Google Sheets append action", "Processed email status update"],
+    result: "Designed to reduce repeated data entry and keep customer records organized.",
+    image: customerWorkflowImg.url,
+    caption: "Administrative support, connected: customer emails flow through a details step into Google Sheets, followed by an email status update.",
+    evidence: "Actual workflow screenshot. The editor shows Published; a completed execution is not shown.",
+  },
+  {
+    id: "fireflies-hubspot",
+    icon: Workflow,
+    title: "Meeting Summaries to HubSpot",
+    category: "Executive Support & CRM",
+    role: "Virtual Assistant & Automation Specialist",
+    period: "Workflow screenshot · October 2026",
+    short: "A meeting follow-up workflow designed to move Fireflies summaries into HubSpot contact records, with an attendee step and organizer filter.",
+    overview: "I built an n8n workflow to connect meeting documentation with CRM administration. It starts when Fireflies summarizes a meeting, retrieves the summary, creates one item per attendee, skips the organizer, and passes the summary to a HubSpot contact action.",
+    problem: "Manually transferring meeting notes to contact records adds repetitive work to meeting follow-up and CRM maintenance.",
+    solution: "Link Fireflies meeting summaries to HubSpot, process attendees individually, and filter out the organizer before updating contact records.",
+    skills: ["Meeting Support", "CRM Administration", "Workflow Automation", "Data Mapping", "Follow-up Organization"],
+    tools: ["n8n", "Fireflies.ai", "HubSpot"],
+    deliverables: ["Meeting summary webhook trigger", "Summary retrieval step", "Per-attendee processing", "Organizer filter", "HubSpot contact update action"],
+    result: "Designed to keep meeting context alongside contact records with less manual copying.",
+    image: meetingWorkflowImg.url,
+    caption: "From meeting notes to organized contacts: Fireflies summaries pass through attendee processing and an organizer filter before a HubSpot contact update.",
+    evidence: "Actual workflow screenshot showing the configured sequence; no completed execution is shown.",
+  },
+  {
+    id: "scheduled-ai-research",
+    icon: Search,
+    title: "Scheduled AI Research Workflow",
+    category: "AI Research · In Progress",
+    role: "AI & Automation Specialist",
+    period: "Workflow screenshot · October 2026",
+    short: "An in-progress n8n research workflow combining scheduled requests, result processing, and a Gemini-powered AI agent.",
+    overview: "I am building a scheduled research workflow to support information gathering. The screenshot shows a schedule trigger, an HTTP request, a Split Out step, and an AI agent connected to Google Gemini, simple memory, and an HTTP tool. The displayed execution stops without output at the Split Out step.",
+    problem: "Repeated online research involves recurring searches and information gathering that can take time away from other administrative priorities.",
+    solution: "Use a schedule to request research data, split results into individual items, and pass them to an AI agent for processing. The result-processing step still needs adjustment.",
+    skills: ["Internet Research", "AI Workflow Design", "Scheduled Automation", "Data Processing", "Workflow Troubleshooting"],
+    tools: ["n8n", "Google Gemini", "HTTP Requests", "Simple Memory"],
+    deliverables: ["Schedule trigger and HTTP request", "Split Out result-processing step", "AI agent with Gemini chat model", "Memory and HTTP tool connections"],
+    result: "In progress: the Split Out step reports a missing 'organic' field and returns no items; end-to-end completion is not demonstrated.",
+    image: researchWorkflowImg.url,
+    caption: "Building repeatable research support with scheduled data requests and a Gemini AI agent. This screenshot captures a work-in-progress result-processing issue.",
+    evidence: "Actual workflow screenshot. The visible run reports that 'organic' was not found and no output data was returned.",
+  },
   {
     id: "content-generator",
     icon: PenTool,
@@ -190,8 +252,8 @@ export function ProjectsSection() {
           <div className="text-sm font-semibold uppercase tracking-wider text-accent mb-3">Projects</div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Selected portfolio projects.</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Practical AI-powered workflows and business systems I've designed and built. Each one is a portfolio
-            demonstration — the visuals are recreated previews of the system, not live client screens.
+            I combine virtual assistance, administrative support, AI, and automation to organize information
+            and reduce repetitive work. Explore my own workflow screenshots alongside selected portfolio demonstrations.
           </p>
         </div>
 
@@ -201,7 +263,7 @@ export function ProjectsSection() {
               key={p.id}
               className="group overflow-hidden rounded-2xl border-border/60 hover:border-accent/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
-              <button type="button" onClick={() => setActive(p)} className="text-left w-full block" aria-label={`View ${p.title}`}>
+              <Button variant="ghost" type="button" onClick={() => setActive(p)} className="text-left w-full block h-auto p-0 whitespace-normal rounded-none" aria-label={`View ${p.title}`}>
                 <div className="relative overflow-hidden bg-muted">
                   <img
                     src={p.image}
@@ -213,7 +275,7 @@ export function ProjectsSection() {
                     {p.category}
                   </Badge>
                 </div>
-              </button>
+              </Button>
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="h-10 w-10 rounded-xl flex items-center justify-center text-primary-foreground shrink-0" style={{ background: "var(--gradient-hero)" }}>
@@ -225,7 +287,7 @@ export function ProjectsSection() {
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.short}</p>
-                <div className="text-sm font-semibold text-accent mb-4">{p.result}</div>
+                <div className="text-sm font-semibold text-accent mb-4">{p.evidence ? (p.id === "scheduled-ai-research" ? "Workflow in progress" : "Built workflow · Actual screenshot") : p.result}</div>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.tools.map((t) => (
                     <Badge key={t} variant="secondary" className="rounded-full text-[11px] px-2.5 py-0.5">{t}</Badge>
@@ -255,18 +317,20 @@ export function ProjectsSection() {
               </div>
 
               <div className="px-6 md:px-8 mt-6">
-                <button
+                <Button
+                  variant="ghost"
                   type="button"
                   onClick={() => setZoom(active.image)}
-                  className="relative block w-full group rounded-2xl overflow-hidden border border-border/60"
+                  className="relative block w-full h-auto p-0 group rounded-2xl overflow-hidden border border-border/60"
                   aria-label="Enlarge screenshot"
                 >
                   <img src={active.image} alt={`${active.title} interface demonstration`} className="w-full" />
                   <span className="absolute top-3 right-3 h-9 w-9 rounded-full bg-background/85 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <Maximize2 className="h-4 w-4" />
                   </span>
-                </button>
-                <div className="text-xs text-muted-foreground mt-2">Visual proof — recreated interface preview. Tap to enlarge.</div>
+                </Button>
+                {active.caption && <p className="text-sm text-muted-foreground leading-relaxed mt-3">{active.caption}</p>}
+                <div className="text-xs text-muted-foreground mt-2">{active.evidence ?? "Recreated interface preview."}</div>
               </div>
 
               <div className="p-6 md:p-8 space-y-6">
