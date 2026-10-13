@@ -10,7 +10,6 @@ import workflowImg from "@/assets/projects/workflow-automation.jpg.asset.json";
 import emailImg from "@/assets/projects/email-assistant.jpg.asset.json";
 import researchImg from "@/assets/projects/research-assistant.jpg.asset.json";
 import promptImg from "@/assets/projects/prompt-library.jpg.asset.json";
-import researchWorkflowImg from "@/assets/projects/ai-research-n8n.png.asset.json";
 import meetingWorkflowImg from "@/assets/projects/fireflies-hubspot-n8n.png.asset.json";
 import customerWorkflowImg from "@/assets/projects/gmail-customer-data-n8n.png.asset.json";
 
@@ -72,25 +71,6 @@ export const projects: Project[] = [
     image: meetingWorkflowImg.url,
     caption: "From meeting notes to organized contacts: Fireflies summaries pass through attendee processing and an organizer filter before a HubSpot contact update.",
     evidence: "Actual workflow screenshot showing the configured sequence; no completed execution is shown.",
-  },
-  {
-    id: "scheduled-ai-research",
-    icon: Search,
-    title: "Scheduled AI Research Workflow",
-    category: "AI Research · In Progress",
-    role: "AI & Automation Specialist",
-    period: "Workflow screenshot · October 2026",
-    short: "An in-progress n8n research workflow combining scheduled requests, result processing, and a Gemini-powered AI agent.",
-    overview: "I am building a scheduled research workflow to support information gathering. The screenshot shows a schedule trigger, an HTTP request, a Split Out step, and an AI agent connected to Google Gemini, simple memory, and an HTTP tool. The displayed execution stops without output at the Split Out step.",
-    problem: "Repeated online research involves recurring searches and information gathering that can take time away from other administrative priorities.",
-    solution: "Use a schedule to request research data, split results into individual items, and pass them to an AI agent for processing. The result-processing step still needs adjustment.",
-    skills: ["Internet Research", "AI Workflow Design", "Scheduled Automation", "Data Processing", "Workflow Troubleshooting"],
-    tools: ["n8n", "Google Gemini", "HTTP Requests", "Simple Memory"],
-    deliverables: ["Schedule trigger and HTTP request", "Split Out result-processing step", "AI agent with Gemini chat model", "Memory and HTTP tool connections"],
-    result: "In progress: the Split Out step reports a missing 'organic' field and returns no items; end-to-end completion is not demonstrated.",
-    image: researchWorkflowImg.url,
-    caption: "Building repeatable research support with scheduled data requests and a Gemini AI agent. This screenshot captures a work-in-progress result-processing issue.",
-    evidence: "Actual workflow screenshot. The visible run reports that 'organic' was not found and no output data was returned.",
   },
   {
     id: "content-generator",
