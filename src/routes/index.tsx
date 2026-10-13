@@ -25,6 +25,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Dikeledi Khoza — AI Productivity & Automation Specialist" },
       { property: "og:description", content: "Practical AI consulting, workflow automation, and training for entrepreneurs." },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
