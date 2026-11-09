@@ -237,7 +237,7 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6">
           {projects.map((p) => (
             <Card
               key={p.id}
@@ -249,7 +249,7 @@ export function ProjectsSection() {
                     src={p.image}
                     alt={`${p.title} interface demonstration`}
                     loading="lazy"
-                    className="w-full aspect-[16/10] object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                    className="block w-full aspect-[16/10] object-contain"
                   />
                   <Badge variant="secondary" className="absolute top-3 left-3 rounded-full text-[11px] backdrop-blur bg-background/80">
                     {p.category}
