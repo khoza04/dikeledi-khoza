@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bot, Mail, Workflow, CalendarDays, BriefcaseBusiness, FileText, MessageCircle, Users, Share2 } from "lucide-react";
+import { Bot, Mail, Workflow, CalendarDays, BriefcaseBusiness, FileText, MessageCircle, Share2, ArrowRight, Maximize2, X } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
