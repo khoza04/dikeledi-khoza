@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep portfolio screenshots as checked-in files in `public/` and reference them with root-relative paths so deployed sites serve them without relying on the asset CDN.
