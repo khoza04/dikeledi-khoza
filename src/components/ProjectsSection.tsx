@@ -4,13 +4,6 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import carWashImg from "@/assets/projects/car-wash-weekly-roster.png.asset.json";
-import proposalImg from "@/assets/projects/proposal-invoice-workflow.png.asset.json";
-import leadBoardImg from "@/assets/projects/lead-prospect-board.png.asset.json";
-import linkedinBufferImg from "@/assets/projects/linkedin-content-buffer.png.asset.json";
-import customerServiceImg from "@/assets/projects/customer-service-assistant.png.asset.json";
-import inboxImg from "@/assets/projects/smart-inbox-assistant.png.asset.json";
-
 type Project = {
   id: string;
   icon: typeof Bot;
@@ -47,7 +40,7 @@ export const projects: Project[] = [
     tools: ["n8n", "Google Sheets", "Google Calendar"],
     deliverables: ["Chat message trigger", "Weekly roster lookup and filtering", "Shift-swap request branch", "Manager approval step", "Roster updates and calendar event action"],
     result: "The screenshot shows the roster, approval, swap-update, and calendar steps connected in one workflow.",
-    image: carWashImg.url,
+    image: "/car-wash-weekly-roster.png",
     caption: "A chat request enters the workflow; roster checks and manager approval lead to spreadsheet updates and a calendar event.",
     evidence: "Actual n8n workflow screenshot.",
   },
@@ -66,7 +59,7 @@ export const projects: Project[] = [
     tools: ["n8n", "Google Sheets", "Google Docs", "Gmail", "Google Drive", "Groq Chat Model"],
     deliverables: ["Form submission trigger", "Proposal and invoice branches", "AI-assisted drafting steps", "Client and service data connections", "Document and email actions"],
     result: "The screenshot shows a connected proposal and invoice drafting workflow; it does not claim a measured business result.",
-    image: proposalImg.url,
+    image: "/proposal-invoice-workflow.png",
     caption: "A form starts branching proposal and invoice paths, with spreadsheet lookups, document creation, email, and Drive actions.",
     evidence: "Actual n8n workflow screenshot.",
   },
@@ -85,7 +78,7 @@ export const projects: Project[] = [
     tools: ["Monday.com"],
     deliverables: ["Planning and execution groups", "Prospect research tasks", "Lead qualification and contact strategy tasks", "Status and priority tracking", "Timeline and dependency fields"],
     result: "The screenshot shows a structured prospecting board with planning and execution tasks, statuses, priorities, and timelines.",
-    image: leadBoardImg.url,
+    image: "/lead-prospect-board.png",
     caption: "A prospecting board lays out research, qualification, contact strategy, proposal preparation, and follow-up tasks.",
     evidence: "Actual project-board screenshot.",
   },
@@ -104,7 +97,7 @@ export const projects: Project[] = [
     tools: ["n8n", "Buffer", "Groq Chat Model"],
     deliverables: ["Schedule trigger", "Topic generation step", "Post-content step", "AI agent", "Buffer HTTP request"],
     result: "The screenshot shows the scheduled content sequence connected to Buffer; no reach or engagement figures are claimed.",
-    image: linkedinBufferImg.url,
+    image: "/linkedin-content-buffer.png",
     caption: "A scheduled workflow creates a topic and post, then sends the content to Buffer.",
     evidence: "Actual n8n workflow screenshot.",
   },
@@ -123,7 +116,7 @@ export const projects: Project[] = [
     tools: ["n8n", "Groq Chat Model", "Google Sheets", "Google Docs", "Gmail"],
     deliverables: ["Incoming chat trigger", "Customer-service agent", "FAQ document connection", "Order, product, price, and customer data connections", "Gmail handover action"],
     result: "The screenshot shows the customer agent connected to support information and a human handover action.",
-    image: customerServiceImg.url,
+    image: "/customer-service-assistant.png",
     caption: "A customer chat reaches an AI agent with FAQ, order, product, and price information, plus a human handover path.",
     evidence: "Actual n8n workflow screenshot.",
   },
@@ -142,7 +135,7 @@ export const projects: Project[] = [
     tools: ["n8n", "Gmail", "Slack", "Groq Chat Model"],
     deliverables: ["Gmail trigger", "AI-agent and conditional steps", "Slack notification action", "Gmail label action", "Gmail draft creation"],
     result: "The screenshot shows an inbox workflow connecting Gmail triage steps with notifications, labels, and draft creation.",
-    image: inboxImg.url,
+    image: "/smart-inbox-assistant.png",
     caption: "Incoming Gmail messages pass through AI-assisted checks, with Slack notification, labeling, and draft actions in the flow.",
     evidence: "Actual n8n workflow screenshot.",
   },
